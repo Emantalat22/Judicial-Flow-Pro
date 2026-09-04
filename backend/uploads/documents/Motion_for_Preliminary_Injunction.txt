@@ -1,0 +1,6 @@
+MOTION FOR PRELIMINARY INJUNCTION AND EXPEDITED DISCOVERY
+Plaintiff Vanguard moves pursuant to Rule 65 for an immediate Order:
+1. Compelling Pacific Grid to energize the 500MW interconnection at Substation Alpha-7.
+2. Enjoining Pacific Grid from deploying, copying, or utilizing Vanguard BMS Algorithm Version 4.2.1.
+3. Ordering full preservation of all SCADA telemetry logs and server communication backups.
+The balance of harms heavily favors Plaintiff due to catastrophic seasonal curtailment losses.

@@ -1,0 +1,3 @@
+DECLARATION OF DR. ELENA ROSTOVA, CTO OF AEGIS ROBOTICS
+1. Aegis Robotics spent $38,000,000 developing the 'PulseVision' Solid-State LIDAR Neural Network Architecture.
+2. Former Director of Perception Dr. Daniel Miller downloaded 1,400 CAD schematics and source repos onto an unauthorized USB device 48 hours prior to announcing his executive appointment at Titan Autonomous Systems.

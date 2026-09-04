@@ -1,0 +1,11 @@
+IN THE DISTRICT COURT OF RECORD — COMMERCIAL DIVISION
+VANGUARD RENEWABLE ENERGY LLC, Plaintiff, v. PACIFIC GRID CORP, Defendant.
+Case No. JFP-2026-0101
+
+VERIFIED COMPLAINT FOR INJUNCTIVE RELIEF AND DAMAGES
+
+1. Plaintiff Vanguard Renewable Energy operates a 500-megawatt solar and battery storage facility.
+2. Under the Master Interconnection Agreement dated June 12, 2024, Defendant Pacific Grid was contractually obligated to complete substation telemetry synchronization by October 1, 2025 (Section 4.2).
+3. Defendant intentionally delayed interconnection by 14 weeks while secretly extracting proprietary battery load balancing algorithms and firmware source code (Version 4.2.1) under the pretext of safety testing.
+4. Plaintiff has suffered liquidated damages exceeding $24,500,000 and imminent loss of intellectual property exclusivity.
+5. WHEREFORE, Plaintiff moves for preliminary injunction and immediate inspection of substation telemetry records.

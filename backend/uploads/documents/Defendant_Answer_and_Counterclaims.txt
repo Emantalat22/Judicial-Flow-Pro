@@ -1,0 +1,5 @@
+DEFENDANT PACIFIC GRID CORP'S ANSWER AND AFFIRMATIVE DEFENSES
+1. Defendant denies all allegations of bad faith delay and trade secret misappropriation.
+2. FIRST AFFIRMATIVE DEFENSE: Interconnection holds were instituted pursuant to mandatory State Reliability Directive SR-902.
+3. SECOND AFFIRMATIVE DEFENSE: Vanguard's inverters generated excessive third-order harmonic distortion exceeding 5.2% THD.
+COUNTERCLAIM: Defendant claims $4,200,000 for emergency reactive power compensation installed at Substation Alpha-7.

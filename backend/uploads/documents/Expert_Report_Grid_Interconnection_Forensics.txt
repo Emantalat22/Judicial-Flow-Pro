@@ -1,0 +1,9 @@
+EXPERT FORENSIC ENGINEERING REPORT
+Prepared by: Dr. Aris Thorne, PE, Senior Grid Reliability Specialist
+Subject: Technical Audit of Substation Alpha-7 Telemetry and Vanguard BMS Firmware
+
+EXECUTIVE SUMMARY:
+1. Substation Alpha-7 was fully equipped and compliant with IEEE 1547 standards as of September 20, 2025.
+2. Pacific Grid telemetry server logs show unauthorized outbound data transfers of 42.8 GB on October 14, 2025, originating from Vanguard's battery management controller to an unencrypted engineering terminal at Pacific Grid HQ.
+3. The claimed 'thermal instability safety hold' cited by Pacific Grid was unsupported by SCADA temperature sensors, which recorded nominal operating temperatures of 21.4°C across all inverter banks.
+CONCLUSION: The interconnection delay was technically unjustified and firmware exfiltration is confirmed.

@@ -1,0 +1,540 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Original Dark Charcoal & Luxury Gold Palette ─────────── */
+  --color-page:        #0E1015;   /* main dark charcoal page background   */
+  --color-sidebar:     #111316;   /* dark sidebar surface                 */
+  --color-topbar:      #111316;   /* dark header surface                  */
+  --color-card:        #161922;   /* primary card surface                 */
+  --color-card-raised: #1E2228;   /* secondary surface / elevated panels  */
+  --color-border:      #262B35;   /* subtle dark border                   */
+
+  /* ── Charcoal Ramp ───────────────────────────────────────── */
+  --color-ch-950: #0B0D11;
+  --color-ch-900: #0E1015;
+  --color-ch-850: #111316;
+  --color-ch-800: #161922;
+  --color-ch-750: #1A1D25;
+  --color-ch-700: #1E2228;
+  --color-ch-650: #242830;
+  --color-ch-600: #262B35;
+  --color-ch-500: #2D323E;
+  --color-ch-400: #383D4B;
+  --color-ch-300: #4A505F;
+  --color-ch-200: #6B7280;
+
+  /* ── Typography & Grays ──────────────────────────────────── */
+  --color-text-primary:   #F4F1E8;   /* warm white / ivory headings & text  */
+  --color-text-secondary: #8E95A5;   /* muted gray secondary text           */
+  --color-text-muted:     #777B80;   /* dim placeholders & footnotes        */
+
+  /* ── Judicial Gold ───────────────────────────────────────── */
+  --color-gold-700: #5C4520;
+  --color-gold-600: #8F713E;   /* dark gold borders & shadows         */
+  --color-gold-500: #C6A15B;   /* primary gold accent                 */
+  --color-gold-400: #D8BB7A;   /* light gold highlights               */
+  --color-gold-300: #E8D09A;
+  --color-gold-200: #F2E5C0;
+  --color-gold-100: rgba(198, 161, 91, 0.1);
+
+  /* ── Semantic Colors ─────────────────────────────────────── */
+  --color-success:  #3FA37C;   /* professional emerald                */
+  --color-warning:  #C69A3A;   /* judicial amber                      */
+  --color-urgent:   #B95353;   /* restrained crimson                  */
+
+  /* ── Typography ─────────────────────────────────────────── */
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+}
+
+* {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #0E1015;
+  color: #F4F1E8;
+}
+
+/* Scrollbar — dark charcoal themed */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #0E1015; }
+::-webkit-scrollbar-thumb { background: #262B35; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #383D4B; }
+
+/* ── 3D Command Deck & Card Elevational Depth System ────────── */
+.panel-3d {
+  background: linear-gradient(180deg, #181C26 0%, #13151D 100%);
+  border: 1px solid rgba(46, 52, 66, 0.85);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.05) inset,
+    0 0 0 1px rgba(198, 161, 91, 0.04) inset,
+    0 4px 16px rgba(0, 0, 0, 0.4),
+    0 1px 3px rgba(0, 0, 0, 0.6);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.25s ease;
+}
+
+.panel-3d-interactive:hover {
+  transform: translateY(-3px);
+  border-color: rgba(198, 161, 91, 0.35);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.08) inset,
+    0 0 0 1px rgba(198, 161, 91, 0.15) inset,
+    0 12px 30px -4px rgba(0, 0, 0, 0.55),
+    0 4px 12px rgba(0, 0, 0, 0.45),
+    0 0 24px rgba(198, 161, 91, 0.06);
+}
+
+.hero-3d {
+  background: linear-gradient(135deg, rgba(24, 28, 38, 0.96) 0%, rgba(18, 21, 28, 0.98) 60%, rgba(13, 15, 20, 1) 100%);
+  border: 1px solid rgba(198, 161, 91, 0.22);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.08) inset,
+    0 0 0 1px rgba(198, 161, 91, 0.08) inset,
+    0 16px 40px -6px rgba(0, 0, 0, 0.65),
+    0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+.pill-3d {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 2px 6px rgba(0, 0, 0, 0.35);
+}
+
+.btn-3d-gold {
+  background: linear-gradient(180deg, #D8BB7A 0%, #C6A15B 100%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.35) inset,
+    0 4px 14px rgba(198, 161, 91, 0.25),
+    0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-3d-gold:hover {
+  background: linear-gradient(180deg, #E2C98D 0%, #D8BB7A 100%);
+  transform: translateY(-1.5px);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.45) inset,
+    0 6px 18px rgba(198, 161, 91, 0.35),
+    0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.btn-3d-gold:active {
+  transform: translateY(1px);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.2) inset,
+    0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.btn-3d-charcoal {
+  background: linear-gradient(180deg, #242933 0%, #1A1D25 100%);
+  border: 1px solid rgba(198, 161, 91, 0.22);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.08) inset,
+    0 3px 10px rgba(0, 0, 0, 0.35);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-3d-charcoal:hover {
+  background: linear-gradient(180deg, #2A303C 0%, #1E222C 100%);
+  border-color: rgba(198, 161, 91, 0.38);
+  transform: translateY(-1.5px);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.12) inset,
+    0 6px 16px rgba(0, 0, 0, 0.45),
+    0 0 12px rgba(198, 161, 91, 0.08);
+}
+
+.btn-3d-charcoal:active {
+  transform: translateY(1px);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.05) inset,
+    0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* ═════════════════════════════════════════════════════════════
+   PHASE 2 & PHASE 5 — 3D INTERACTION & ELEVATION ARCHITECTURE
+═════════════════════════════════════════════════════════════ */
+
+/* ── Perspective Environments ── */
+.perspective-deck {
+  perspective: 1200px;
+  transform-style: preserve-3d;
+}
+
+/* ── 3D Perspective Tilt (Preserved exclusively for Dashboard & Notifications) ── */
+.card-3d-tilt {
+  transform-style: preserve-3d;
+}
+
+.card-3d-tilt:hover {
+  transform: translateY(-5px) perspective(900px) rotateX(2deg) rotateY(-1deg);
+  border-color: rgba(198, 161, 91, 0.45);
+  border-top-color: rgba(216, 187, 122, 0.7);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.15) inset,
+    0 0 0 1px rgba(198, 161, 91, 0.2) inset,
+    0 20px 42px -8px rgba(0, 0, 0, 0.75),
+    0 6px 14px rgba(0, 0, 0, 0.6),
+    0 0 28px rgba(198, 161, 91, 0.12);
+}
+
+/* ── Dimensional 3D Card Chassis (Stable Orientation — NO FLIP / NO ROTATION) ── */
+.card-3d-chassis {
+  position: relative;
+  background: linear-gradient(180deg, #1A1E29 0%, #141720 40%, #0F1218 100%);
+  border: 1px solid rgba(48, 55, 70, 0.85);
+  border-top: 1px solid rgba(216, 187, 122, 0.35);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.08) inset,
+    0 0 0 1px rgba(198, 161, 91, 0.06) inset,
+    0 8px 24px -4px rgba(0, 0, 0, 0.6),
+    0 2px 6px rgba(0, 0, 0, 0.5);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.25s ease;
+}
+
+/* Functional page containers (tables, toolbars, dialogs) stay anchored without flip */
+.card-3d-chassis:not(.card-3d-tilt):not(.card-3d-lift):hover {
+  border-color: rgba(198, 161, 91, 0.3);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.1) inset,
+    0 0 0 1px rgba(198, 161, 91, 0.1) inset,
+    0 10px 28px -4px rgba(0, 0, 0, 0.65),
+    0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* ── Functional 3D Interactive Card Lift (Natural Physical Elevation — NO ROTATION) ── */
+.card-3d-lift {
+  position: relative;
+  background: linear-gradient(180deg, #1A1E29 0%, #141720 40%, #0F1218 100%);
+  border: 1px solid rgba(48, 55, 70, 0.85);
+  border-top: 1px solid rgba(216, 187, 122, 0.35);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.08) inset,
+    0 0 0 1px rgba(198, 161, 91, 0.06) inset,
+    0 8px 24px -4px rgba(0, 0, 0, 0.6),
+    0 2px 6px rgba(0, 0, 0, 0.5);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.25s ease;
+}
+
+.card-3d-lift:hover {
+  transform: translateY(-4px) scale(1.008);
+  border-color: rgba(198, 161, 91, 0.45);
+  border-top-color: rgba(216, 187, 122, 0.7);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.15) inset,
+    0 0 0 1px rgba(198, 161, 91, 0.2) inset,
+    0 18px 38px -6px rgba(0, 0, 0, 0.78),
+    0 4px 12px rgba(0, 0, 0, 0.55),
+    0 0 20px rgba(198, 161, 91, 0.12);
+}
+
+.card-3d-lift:active {
+  transform: translateY(1px) scale(0.998);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.08) inset,
+    0 4px 12px rgba(0, 0, 0, 0.6);
+  transition-duration: 0.1s;
+}
+
+/* ── Recessed Display Well (Sunken Telemetry & Counters) ── */
+.recessed-well {
+  background: linear-gradient(180deg, #0A0C11 0%, #0D1017 100%);
+  border: 1px solid rgba(34, 39, 50, 0.9);
+  border-bottom: 1px solid rgba(56, 63, 80, 0.4);
+  box-shadow:
+    inset 0 3px 8px rgba(0, 0, 0, 0.85),
+    inset 0 1px 2px rgba(0, 0, 0, 0.95),
+    0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+/* ── Raised 3D Icon Pedestal ── */
+.pedestal-3d {
+  background: linear-gradient(145deg, #242935 0%, #151821 100%);
+  border: 1px solid rgba(198, 161, 91, 0.3);
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.5),
+    inset 0 1px 1px rgba(255, 255, 255, 0.22),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.6);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.group:hover .pedestal-3d {
+  transform: translateY(-1.5px) scale(1.04);
+  box-shadow:
+    0 6px 14px rgba(0, 0, 0, 0.6),
+    0 0 12px rgba(198, 161, 91, 0.25),
+    inset 0 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+/* ── Recessed Pipeline Conduit Channel ── */
+.conduit-track {
+  background: linear-gradient(180deg, #090B10 0%, #0E1119 100%);
+  border: 1px solid rgba(36, 42, 54, 0.95);
+  box-shadow:
+    inset 0 3px 6px rgba(0, 0, 0, 0.9),
+    0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* ── 3D Cylindrical Pipeline Node Puck ── */
+.node-puck {
+  background: linear-gradient(180deg, #222734 0%, #141720 100%);
+  border: 2px solid rgba(198, 161, 91, 0.35);
+  box-shadow:
+    0 6px 16px -2px rgba(0, 0, 0, 0.7),
+    0 2px 4px rgba(0, 0, 0, 0.5),
+    inset 0 2px 3px rgba(255, 255, 255, 0.2),
+    inset 0 -2px 3px rgba(0, 0, 0, 0.6);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.node-puck-active {
+  background: linear-gradient(180deg, #2A2C30 0%, #181B22 100%);
+  border: 2px solid #D8BB7A;
+  box-shadow:
+    0 0 24px rgba(198, 161, 91, 0.55),
+    0 8px 20px -2px rgba(0, 0, 0, 0.8),
+    inset 0 2px 4px rgba(255, 255, 255, 0.35),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* ── Recessed Data Bay for Charts & Tables ── */
+.recessed-data-bay {
+  background: linear-gradient(180deg, #0B0D13 0%, #0E1118 100%);
+  border: 1px solid rgba(38, 44, 58, 0.9);
+  box-shadow:
+    inset 0 4px 14px rgba(0, 0, 0, 0.85),
+    inset 0 1px 2px rgba(0, 0, 0, 0.95),
+    0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* ── Floating 3D Judicial Emblem Animation ── */
+@keyframes judicial-float-3d {
+  0%, 100% {
+    transform: translateY(0px) rotateX(4deg) rotateY(-4deg);
+  }
+  50% {
+    transform: translateY(-7px) rotateX(1deg) rotateY(4deg);
+  }
+}
+
+.animate-judicial-float {
+  animation: judicial-float-3d 6.5s ease-in-out infinite;
+  transform-style: preserve-3d;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-judicial-float {
+    animation: none;
+    transform: none;
+  }
+  .card-3d-chassis:hover,
+  .card-3d-lift:hover,
+  .card-3d-tilt:hover {
+    transform: none !important;
+  }
+  .page-3d-enter {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
+/* ═════════════════════════════════════════════════════════════
+   PHASE 4 — WHOLE-APP 3D COMMAND SYSTEM
+═════════════════════════════════════════════════════════════ */
+
+/* ── Smooth 3D Page Entrance ── */
+@keyframes page-enter-3d {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.995);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+.page-3d-enter {
+  animation: page-enter-3d 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transform-origin: top center;
+}
+
+/* ── 3D Command Header Bar ── */
+.page-header-3d {
+  position: relative;
+  background: linear-gradient(180deg, #171B25 0%, #11141C 100%);
+  border: 1px solid rgba(46, 52, 66, 0.85);
+  border-top: 1px solid rgba(216, 187, 122, 0.35);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.08) inset,
+    0 0 0 1px rgba(198, 161, 91, 0.06) inset,
+    0 10px 28px -6px rgba(0, 0, 0, 0.65),
+    0 2px 6px rgba(0, 0, 0, 0.5);
+  border-radius: 1.25rem;
+}
+
+/* ── 3D Floating Modal Chassis ── */
+@keyframes modal-scale-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.96) translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.modal-3d-panel {
+  position: relative;
+  background: linear-gradient(180deg, #1A1E29 0%, #12151D 100%);
+  border: 1px solid rgba(198, 161, 91, 0.3);
+  border-top: 1px solid rgba(216, 187, 122, 0.5);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.15) inset,
+    0 0 0 1px rgba(198, 161, 91, 0.1) inset,
+    0 25px 60px -10px rgba(0, 0, 0, 0.88),
+    0 8px 24px rgba(0, 0, 0, 0.6);
+  border-radius: 1.25rem;
+  animation: modal-scale-in 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* ── 3D Recessed Form Input ── */
+.input-3d {
+  background: linear-gradient(180deg, #0A0C11 0%, #0E1118 100%);
+  border: 1px solid rgba(38, 44, 58, 0.9);
+  color: #F4F1E8;
+  box-shadow:
+    inset 0 2px 5px rgba(0, 0, 0, 0.85),
+    0 1px 0 rgba(255, 255, 255, 0.04);
+  transition: all 0.2s ease;
+}
+
+.input-3d:focus {
+  outline: none;
+  border-color: #C6A15B;
+  box-shadow:
+    inset 0 2px 4px rgba(0, 0, 0, 0.85),
+    0 0 0 2px rgba(198, 161, 91, 0.25),
+    0 0 14px rgba(198, 161, 91, 0.15);
+}
+
+/* ── 3D Sidebar Active Navigation Item ── */
+.nav-item-3d-active {
+  background: linear-gradient(90deg, rgba(198, 161, 91, 0.16) 0%, rgba(22, 25, 34, 0.9) 100%);
+  border: 1px solid rgba(198, 161, 91, 0.4);
+  border-left: 3px solid #D8BB7A;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 4px 12px rgba(0, 0, 0, 0.5),
+    0 0 16px rgba(198, 161, 91, 0.1);
+  color: #D8BB7A !important;
+}
+
+/* ── 3D Status Badges ── */
+.badge-3d {
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.15),
+    0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* ═════════════════════════════════════════════════════════════
+   PHASE 6 — PREMIUM 3D GOLD CUSTOM CURSOR
+═════════════════════════════════════════════════════════════ */
+
+/* Hide default cursor on desktop when fine pointer is available */
+@media (pointer: fine) {
+  html,
+  body,
+  a,
+  button,
+  [role="button"],
+  select,
+  .cursor-pointer {
+    cursor: none !important;
+  }
+
+  /* Ensure native text cursor is preserved for inputs/textareas */
+  input:not([type="button"]):not([type="submit"]):not([type="checkbox"]):not([type="radio"]),
+  textarea,
+  [contenteditable="true"] {
+    cursor: text !important;
+  }
+
+  /* Preserve disabled state */
+  :disabled,
+  [aria-disabled="true"] {
+    cursor: not-allowed !important;
+  }
+}
+
+/* Base cursor wrapper containers (hardware accelerated) */
+.custom-cursor-ring-wrapper,
+.custom-cursor-dot-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 999999;
+  will-change: transform;
+}
+
+/* Inner Gold Center Dot */
+.custom-cursor-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #D8BB7A;
+  border-radius: 9999px;
+  box-shadow: 0 0 6px rgba(198, 161, 91, 0.8), 0 0 1px #FFFFFF;
+  transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.15s ease;
+}
+
+.custom-cursor-dot.cursor-hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 8px rgba(216, 187, 122, 0.95), 0 0 2px #FFFFFF;
+}
+
+.custom-cursor-dot.cursor-click {
+  transform: scale(0.8);
+}
+
+/* Outer Gold Ring */
+.custom-cursor-ring {
+  width: 28px;
+  height: 28px;
+  border: 1.5px solid rgba(216, 187, 122, 0.7);
+  background: rgba(198, 161, 91, 0.02);
+  border-radius: 9999px;
+  box-shadow: 0 0 10px rgba(198, 161, 91, 0.22), inset 0 0 4px rgba(198, 161, 91, 0.08);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.2s ease,
+              box-shadow 0.2s ease,
+              background-color 0.2s ease,
+              opacity 0.2s ease;
+}
+
+/* Interactive Hover State (links, buttons, clickable cards) */
+.custom-cursor-ring.cursor-hover {
+  transform: scale(1.35); /* ~38px diameter */
+  border-color: rgba(216, 187, 122, 0.95);
+  background-color: rgba(198, 161, 91, 0.08);
+  box-shadow: 0 0 14px rgba(198, 161, 91, 0.45), inset 0 0 6px rgba(198, 161, 91, 0.2);
+}
+
+/* Click / Press State */
+.custom-cursor-ring.cursor-click {
+  transform: scale(0.75); /* ~21px diameter brief contraction */
+  border-color: #D8BB7A;
+  border-width: 2px;
+  background-color: rgba(198, 161, 91, 0.15);
+  box-shadow: 0 0 16px rgba(198, 161, 91, 0.6);
+}
+
+

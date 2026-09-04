@@ -1,0 +1,8 @@
+UNITED STATES COAST GUARD MARINE CASUALTY REPORT
+Vessel: M/V Pacific Osprey (IMO 9482710) | Operator: Apex Maritime Logistics Ltd
+
+FINDINGS OF FACT:
+1. On February 4, 2026 at 0214 hours, M/V Pacific Osprey discharged an estimated 1,800 gallons of heavy fuel oil in Channel Sector 4.
+2. Inspection of the oil water separator revealed physical tampering with the optical density sensor bypass valve.
+3. Bridge navigation voice recordings confirm the Second Mate was absent from the radar watch during restricted visibility transit.
+VIOLATION: Clear violation of Clean Water Act Sec 311 and COLREGS Rule 5 (Lookout Duty).
