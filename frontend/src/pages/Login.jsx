@@ -58,7 +58,7 @@ export default function Login() {
       } else if (Array.isArray(detail)) {
         errorMsg = detail.map((d) => d.msg || d.message).join(', ')
       } else if (!err.response || err.response.status >= 500 || (err.message && err.message.includes('Network Error'))) {
-        errorMsg = 'Cannot connect to backend server. Please verify the API is running on port 8000.'
+        errorMsg = 'Cannot connect to backend server. Please check your network connection or verify the backend service is running.'
       }
       setError(errorMsg)
     } finally {
