@@ -13,7 +13,6 @@ import {
   BellIcon,
   SettingsIcon,
   SearchIcon,
-  UserIcon,
   MenuIcon,
   ChevronRightIcon,
   ChevronDownIcon,
@@ -30,7 +29,6 @@ const navItems = [
   { to: '/hearings',      label: 'Hearings',      Icon: CalendarIcon },
   { to: '/documents',     label: 'Documents',     Icon: FileIcon },
   { to: '/tasks',         label: 'Tasks',         Icon: CheckCircleIcon },
-  { to: '/users',         label: 'Users',         Icon: UserIcon },
   { to: '/ai',            label: 'AI Assistant',  Icon: SparklesIcon },
   { to: '/notifications', label: 'Notifications', Icon: BellIcon },
 ]
@@ -41,7 +39,6 @@ const pageTitles = {
   '/hearings':      'Hearings',
   '/documents':     'Documents',
   '/tasks':         'Tasks & Action Items',
-  '/users':         'Chambers User Management',
   '/ai':            'AI Assistant',
   '/notifications': 'Notifications',
   '/settings':      'Settings',

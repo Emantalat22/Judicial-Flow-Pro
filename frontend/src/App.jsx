@@ -13,7 +13,6 @@ import Tasks from './pages/Tasks'
 import AIAssistant from './pages/AIAssistant'
 import Notifications from './pages/Notifications'
 import Settings from './pages/Settings'
-import Users from './pages/Users'
 
 export default function App() {
   return (
@@ -42,7 +41,6 @@ export default function App() {
           <Route path="/hearings" element={<Hearings />} />
           <Route path="/documents" element={<Documents />} />
           <Route path="/tasks" element={<Tasks />} />
-          <Route path="/users" element={<Users />} />
           <Route path="/ai" element={<AIAssistant />} />
           <Route path="/notifications" element={<Notifications />} />
           <Route path="/settings" element={<Settings />} />
